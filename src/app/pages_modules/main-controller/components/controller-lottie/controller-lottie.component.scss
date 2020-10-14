@@ -1,0 +1,25 @@
+.lottie-container {
+  div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .blink-pause {
+    top: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    ng-lottie {
+      position: absolute;
+      left: -19.4%;
+      top: -18.5%;
+      width: 130%;
+      z-index: 1;
+    }
+  }
+}

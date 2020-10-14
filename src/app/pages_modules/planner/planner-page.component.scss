@@ -1,0 +1,47 @@
+@import 'globals/base';
+
+.planner-page-wrapper {
+  @include main-background-active;
+  display: grid;
+  grid-template-columns: [first] 10% [line2] auto [line3] 25% [end];
+  grid-template-rows: [first] 20% [col2] auto [end];
+  width: 100vw;
+  height: 100vh;
+  &.splitted-screen {
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
+
+  .top-middle-title {
+    @include flex-v-h-center;
+    grid-column: line2 / line3;
+    color: $color-primary;
+    font-size: 24rem;
+    font-weight: 500;
+  }
+
+  .main-panel-container {
+    grid-column: line2 / line3;
+    color: $color-primary;
+    font-size: 10rem;
+    display: grid;
+    grid-auto-rows: minmax(max-content, 2fr);
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  .left-ruller-container {
+    grid-column: first / line2;
+    grid-row: col2 / end;
+    border: 1rem solid lightcoral;
+    opacity: 0.3;
+  }
+
+  .right-ruller-container {
+    grid-column: line3 / end;
+    grid-row: col2 / end;
+    border: 1rem solid lightcoral;
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="slots-list">
+  <div class="job-item" (click)="slotClick($event, slot)" *ngFor="let slot of slots$ | async">
+    <slot
+      [inksArr]="slotInksArr"
+      [plannerSlotEntity]="slot"
+      (unfocused)="unselectSlot()"
+      [isActive]="selectedSlot === slot"
+    >
+    </slot>
+  </div>
+</div>

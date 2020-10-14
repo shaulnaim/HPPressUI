@@ -1,0 +1,10 @@
+<section class="slot-wrapper">
+  <div class="job-container" [ngClass]="{ active: isActive }" tabindex="0">
+    <job-header
+      [editMode]="isActive"
+      [entity]="plannerSlotEntity"
+      (EnterClicked)="unfocusSlot()"
+    ></job-header>
+  </div>
+  <replace-inks [inksArr]="inksArr"></replace-inks>
+</section>

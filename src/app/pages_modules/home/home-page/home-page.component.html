@@ -1,0 +1,31 @@
+<div class="outer-layout">
+  <section class="layer-0 screens-background">
+    <div class="inspection top" [ngClass]="{ 'off-bg': isShowOffBg }"></div>
+    <div class="planner" [ngClass]="{ 'off-bg': isShowOffBg }"></div>
+    <div class="monitor" [ngClass]="{ 'off-bg': isShowOffBg }"></div>
+  </section>
+  <section class="layer-1 main-controller-bg">
+    <controller-layout-wrapper>
+      <controller-lottie></controller-lottie>
+    </controller-layout-wrapper>
+  </section>
+  <section class="layer-2 screens-content">
+    <div class="inspection">
+      <button class="extend-icon" routerLink="/inspection"></button>
+      <inspection-page [isSplittedScreen]="true"></inspection-page>
+    </div>
+
+    <div class="planner">
+      <button class="extend-icon" routerLink="/planner"></button>
+      <planner-page [isSplittedScreen]="true"></planner-page>
+    </div>
+
+    <div class="monitor">
+      <button class="extend-icon" routerLink="/monitor"></button>
+      <monitor-page [isSplittedScreen]="true"></monitor-page>
+    </div>
+  </section>
+  <section class="layer-3 main-controller-buttons" controller-buttons>
+    <main-controller (switchToDarkBackground)="changeToOffBg($event)"></main-controller>
+  </section>
+</div>

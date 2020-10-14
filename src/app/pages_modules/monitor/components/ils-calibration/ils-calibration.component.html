@@ -1,0 +1,35 @@
+<div class="process-container">
+  <div class="process-btn-container">
+    <process-animation *ngIf="!isShowPlayBtn && !getIsDisabled()" (click)="onProcessBtnClick()"></process-animation>
+    <button
+      (click)="onProcessBtnClick()"
+      [disabled]="getIsDisabled()"
+      class="btn"
+      [ngClass]="{
+        'play-process': isShowPlayBtn,
+        'stop-process': !isShowPlayBtn,
+        disabled: getIsDisabled()
+      }"
+    ></button>
+  </div>
+  <div class="status-container">
+    <div class="info">{{ infoText }}</div>
+    <div class="more-info">{{ subInfoText }}</div>
+  </div>
+</div>
+
+<div class="stages-container">
+  <div *ngFor="let stage of ilsCalibrationOperation?.Stages; let i = index; let lastItem = last" class="stage-container">
+    <div class="stage">
+      <div class="stage-circle" [ngClass]="stage.Status | kebabcase">
+        <div *ngIf="stage.Status == stageStatus.InProgress" class="loader-animation-img" [ngClass]="stage.Status | kebabcase"></div>
+        <div *ngIf="stage.Status == stageStatus.Succeeded" class="success-ico"></div>
+        <div *ngIf="stage.Status == stageStatus.Failed" class="error-ico"></div>
+      </div>
+      <label class="stage-text" [ngClass]="stage.Status | kebabcase">
+        {{ stage.Name }}
+      </label>
+    </div>
+    <div *ngIf="!lastItem" class="line" [ngClass]="ilsCalibrationOperation.Stages[i + 1].Status | kebabcase"></div>
+  </div>
+</div>

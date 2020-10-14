@@ -1,0 +1,42 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "rootDir": ".",
+    "paths": {
+      "assets/*": ["assets/*"],
+      "hp-services": ["app/core_modules/hp-services/index.ts"],
+      "hp-ui-elements": ["app/shared_modules/hp-ui-elements/index.ts"],
+      "hp-patterns-base-classes": ["app/shared_modules/hp-patterns-base-classes/index.ts"],
+      "hp-components-base-classes": ["app/shared_modules/hp-components-base-classes/index.ts"],
+      "paper-handling-api": ["app/api_modules/bl-paper-handling-api/index.ts"],
+      "press-control-api": ["app/api_modules/bl-press-control-api/index.ts"],
+      "app-press-control-api": ["app/api_modules/app-press-control-api/index.ts"],
+      "app-planner-api": ["app/api_modules/app-planner-api/index.ts"],
+      "calibrations-api": ["app/api_modules/calibrations-api/index.ts"],
+      "home-page": ["app/pages_modules/home/index.ts"],
+      "inspection-page": ["app/pages_modules/inspection/index.ts"],
+      "monitor-page": ["app/pages_modules/monitor/index.ts"],
+      "planner-page": ["app/pages_modules/planner/index.ts"],
+      "main-controller": ["app/pages_modules/main-controller/index.ts"],
+      "devEnv": ["environments/environment"]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

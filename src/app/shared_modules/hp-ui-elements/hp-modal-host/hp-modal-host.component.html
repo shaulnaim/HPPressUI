@@ -1,0 +1,20 @@
+<div #HpModalContainer class="hp-modal" [ngClass]="screenPosition | lowercase">
+  <div class="hp-modal-header">
+    <div class="yellow-alert-icon"></div>
+    <h2 class="hp-modal-title">{{ modalTitle | uppercase }}</h2>
+  </div>
+
+  <div class="hp-modal-body">
+    <div #ref><ng-content></ng-content></div>
+    <ng-container *ngIf="ref.children.length == 0">
+      <label *ngFor="let textLine of textLines">{{ textLine }}</label>
+    </ng-container>
+  </div>
+
+  <div class="hp-modal-footer">
+    <button class="left-btn" (click)="leftBtnWasClicked()">{{ leftBtnTxt | uppercase }}</button>
+    <button class="right-btn" (click)="rightBtnWasClicked()">{{ rightBtnTxt | uppercase }}</button>
+  </div>
+</div>
+
+<div class="hp-modal-backdrop"></div>

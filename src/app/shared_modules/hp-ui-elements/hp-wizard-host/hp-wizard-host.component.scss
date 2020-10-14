@@ -1,0 +1,101 @@
+@import 'globals/base';
+@import 'globals/base-mixins';
+
+:host {
+  position: absolute;
+  .wizard-host-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 100px 30px rgba(0, 0, 0, 0.7);
+    border: solid 2px $color-primary-50;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(322deg, #021b34 100%, #13365a 3%);
+
+    header {
+      display: grid;
+      place-items: center;
+      position: relative;
+      top: 1px;
+      height: 76rem;
+      width: 100%;
+      border-radius: 4px;
+      border-bottom: 2rem solid rgba(255, 255, 255, 0.16);
+      background-image: linear-gradient(to bottom, rgba(204, 229, 255, 0.2), rgba(204, 229, 255, 0));
+      h3 {
+        color: #fff;
+        font-weight: normal;
+      }
+      .state-indicator {
+        width: 99.6%;
+        height: 1rem;
+        opacity: 0.9;
+        &.failure {
+          box-shadow: 0 0 6rem 5rem rgba(255, 55, 55, 0.7);
+          border-radius: 8rem;
+          border: solid 4rem $color-primary;
+        }
+        &.success {
+          box-shadow: 0 0 6rem 3rem rgba(13, 214, 0, 0.7), 0 0 6px 3px rgba(13, 214, 0, 0.7);
+          border-radius: 8rem;
+          border: solid 4rem $color-primary;
+        }
+      }
+      .minimize-svg {
+        position: absolute;
+        z-index: 2;
+        left: 100%;
+        width: 64rem;
+        height: 64rem;
+        transform: translate(-46%, -63%);
+        &.hide {
+          display: none;
+        }
+        &.disabled {
+          background: url('/assets/icons/monitor/minimize-disable.svg') no-repeat;
+        }
+        &.enabled {
+          background: url('/assets/icons/monitor/minimize-enable.svg') no-repeat;
+        }
+        &.press {
+          background: url('/assets/icons/monitor/minimize-press.svg') no-repeat;
+        }
+      }
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 10rem;
+      max-height: 100%;
+      overflow-y: auto;
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 82rem;
+      border-radius: 4rem;
+      background-image: linear-gradient(to bottom, rgba(204, 229, 255, 0.08), rgba(204, 229, 255, 0));
+      border-top: 2rem solid rgba(255, 255, 255, 0.16);
+
+      .right-btns {
+        display: flex;
+      }
+      button {
+        &.back-btn {
+          @include primary-btn($width: 160px);
+          margin-left: 16rem;
+        }
+        &.cancel-btn {
+          @include secondary-btn($width: 160px);
+          margin-right: 16rem;
+        }
+        &.ok-btn {
+          @include primary-btn($width: 160px);
+          margin-right: 16rem;
+        }
+      }
+    }
+  }
+}

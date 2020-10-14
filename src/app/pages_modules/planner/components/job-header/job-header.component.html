@@ -1,0 +1,24 @@
+<ul>
+  <li class="job-title">
+    <img id="thumbnail" src="assets/images/press-control/jobs-list/print.png" />
+    <inline-edit-input [(inputModel)]="editableEntity.JobDetails.Name" [isFocused]="true"></inline-edit-input>
+  </li>
+  <li>
+    <inline-edit-input
+      [(inputModel)]="editableEntity.JobDetails.Length"
+      [iconSrcPath]="legthSvgPath"
+    ></inline-edit-input>
+  </li>
+  <li>
+    <div class="substrate-out-svg"></div>
+    <span class="test-substrate-name label">{{ entity.SubstrateName }}</span>
+  </li>
+  <li>
+    <div class="ink-svg"></div>
+    <span class="label">6</span>
+  </li>
+  <li>
+    <div class="time-svg"></div>
+    <span class="label">1h 36min</span>
+  </li>
+</ul>

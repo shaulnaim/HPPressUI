@@ -1,0 +1,105 @@
+<div *ngIf="isShowMainButtons" class="main-top-buttons">
+  <input
+    *ngIf="isShowPrintBtn"
+    data-automation-id = "ControllerPrintBtn"
+    type="button"
+    class="btn"
+    [ngClass]="
+      isPrintBtnPresssed
+        ? 'print-' + (controllerState?.CurrentPressState | lowercase) + '-pressed'
+        : controllerState?.IsPrintAvailable
+        ? 'print-active'
+        : 'print-disable'
+    "
+    (pointerdown)="OnPrintBtnPressedDown()"
+    (pointerup)="OnPrintBtnPressedUP()"
+  />
+  <input
+    data-automation-id = "ControllerPauseBtn"
+    *ngIf="!isShowPrintBtn"
+    type="button"
+    class="btn"
+    [ngClass]="{
+      'pause-hide': !isShowPauseIcon,
+      'pause-pressed': isPausePresssed,
+      'pause-active': controllerState?.IsPauseAvailable,
+      'pause-disable': !controllerState?.IsPauseAvailable
+    }"
+    (pointerdown)="onPauseBtnPressedDown()"
+    (pointerup)="onPauseBtnPressedUp()"
+  />
+  <input
+    data-automation-id = "ControllerStopBtn"
+    type="button"
+    class="btn"
+    [ngClass]="
+      isStopBtnPresssed
+        ? 'stop-' + (controllerState?.CurrentPressState | lowercase) + '-pressed'
+        : controllerState?.IsStopAvailable
+        ? 'stop-active'
+        : 'stop-disable'
+    "
+    (pointerdown)="onStopBtnPressedDown()"
+    (pointerup)="onStopBtnPressedUp()"
+  />
+</div>
+
+<div class="main-bottom-buttons">
+  <input
+    *ngIf="isShowMainButtons"
+    data-automation-id = "ControllerMessageBtn"
+    type="button"
+    class="btn"
+    [ngClass]="
+      isMsgBtnPresssed
+        ? 'message-' + (controllerState?.CurrentPressState | lowercase) + '-pressed'
+        : isShowStateMenu
+        ? 'message-disable'
+        : 'message-active'
+    "
+    (pointerdown)="toggleOnMsgeBtnPressed()"
+    (pointerup)="onMsgBtnPressedUp()"
+  />
+  <div class="main-state-container">
+    <input
+      *ngIf="isShowMainButtons"
+      data-automation-id = "ControllerStateToggleBtn"
+      type="button"
+      class="btn"
+      [ngClass]="
+        isShowStateMenu
+          ? 'state-' + (controllerState?.CurrentPressState | lowercase) + '-pressed'
+          : isStateAvailable
+          ? 'state-active'
+          : 'state-disable'
+      "
+      (pointerdown)="toggleOnStateBtnPressed()"
+    />
+    <div *ngIf="isShowMainButtons || isTransitionToOff" class="state-menu" [class.pointer-events-none]="!isShowStateMenu">
+      <state-menu-buttons (isAnimating)="updateIsAnimating($event)" [isShowStateMenu]="isShowStateMenu"></state-menu-buttons>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="!isShowMainButtons">
+  <input data-automation-id = "ControllerOffStatesBtn" type="button" class="off-states-btn" (pointerdown)="onOffBtnPressed()" />
+  <div class="off-button-container">
+    <!-- TODO: remove comment after future dev implemented-->
+    <!-- <div class="switch-wrapper">
+      <div *ngIf="currentLottieState !== mainPressControlState.Off" class="switch-to-container">
+        <div
+          class="switch-to-icon"
+          [ngClass]="{
+            'to-standby':
+              currentLottieState === mainPressControlState.OffToReady ||
+              currentLottieState === mainPressControlState.OffStandbyToReady,
+            'to-ready': currentLottieState === mainPressControlState.OffReadyToStandby
+          }"
+        ></div>
+        <span class="switch-to-text">
+          {{ currentLottieState == mainPressControlState.OffReadyToStandby ? switchToReadyText : switchToStandbyText }}
+        </span>
+      </div>
+    </div> -->
+  </div>
+</ng-container>

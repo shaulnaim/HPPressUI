@@ -1,0 +1,28 @@
+@import 'globals/base';
+
+img {
+  &.input-icon {
+    position: absolute;
+    padding: 7rem 7rem;
+  }
+}
+
+span.label {
+  display: inline-block;
+  font-size: 16rem;
+  font-weight: 400;
+  letter-spacing: 0.35rem;
+  padding-left: 5rem;
+  &.bold {
+    font-weight: 600;
+  }
+}
+
+input {
+  height: 35rem;
+  width: 100rem;
+  @include idle-input;
+  &.input-icon {
+    padding-left: 30px;
+  }
+}

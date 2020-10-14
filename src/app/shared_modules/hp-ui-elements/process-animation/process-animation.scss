@@ -1,0 +1,43 @@
+.profile-main-loader {
+  position: absolute;
+  top: 12rem;
+  .loader {
+    margin: 0rem auto;
+    height: 120rem;
+    .glow-path {
+      animation: dash 2.5s ease-in-out infinite;
+      stroke-linecap: round;
+      position: absolute;
+    }
+    .circular-loader {
+      height: 100%;
+      width: 100%;
+      animation: rotate 4s linear infinite;
+      .loader-path {
+        animation: dash 2.5s ease-in-out infinite;
+        stroke-linecap: round;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}

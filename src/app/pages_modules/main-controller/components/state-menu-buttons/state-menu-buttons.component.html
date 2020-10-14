@@ -1,0 +1,35 @@
+<div
+  *ngIf="isShowStateMenu"
+  @slide
+  (@slide.start)="slideStateMenuStart($event)"
+  (@slide.done)="slideStateMenuDone($event)"
+  class="state-menu-wrapper"
+>
+  <div class="state-menu-panel" [ngClass]="(menuPanelState | lowercase) + currentButtonPressed"></div>
+  <div class="state-menu-buttons">
+    <input
+      data-automation-id="ControllerMenuReadyButton"
+      type="button"
+      class="btn ready-btn"
+      [ngClass]="controllerState?.IsGetReadyAvailable ? '' : 'disabled'"
+      [disabled]="!controllerState?.IsGetReadyAvailable"
+      (pointerdown)="onReadyBtnPressed()"
+    />
+    <input
+      data-automation-id="ControllerMenuStandbyButton"
+      type="button"
+      class="btn standby-btn"
+      [ngClass]="controllerState?.IsGoToStandbyAvailable ? '' : 'disabled'"
+      [disabled]="!controllerState?.IsGoToStandbyAvailable"
+      (pointerdown)="onStandbyBtnPressed()"
+    />
+    <input
+      data-automation-id="ControllerMenuOffButton"
+      type="button"
+      class="btn off-btn"
+      [ngClass]="controllerState?.IsGoToOffAvailable ? '' : 'disabled'"
+      [disabled]="!controllerState?.IsGoToOffAvailable"
+      (pointerdown)="onStateOffBtnPressed()"
+    />
+  </div>
+</div>

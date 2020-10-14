@@ -1,0 +1,427 @@
+@font-face {
+  font-family: 'Roboto';
+  font-family: 'Roboto';
+  src: url('assets/fonts/Medium/Roboto-Medium.woff2') format('assets/fonts/Medium/woff2'),
+    url('assets/fonts/Medium/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-family: 'Roboto';
+  src: url('assets/fonts/Bold/Roboto-Bold.woff2') format('assets/fonts/Bold/woff2'), url('assets/fonts/Bold/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-family: 'Roboto';
+  src: url('assets/fonts/Regular/Roboto-Regular.woff2') format('assets/fonts/Regular/woff2'),
+    url('assets/fonts/Regular/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-family: 'Roboto';
+  src: url('assets/fonts/Black/Roboto-Black.woff2') format('assets/fonts/Black/woff2'),
+    url('assets/fonts/Black/Roboto-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin textindicationXLdisable {
+  font-family: 'Roboto';
+  font-size: 88px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 1.91px;
+  color: $color-primary;
+}
+
+@mixin textindicationXLwarning_T2 {
+  font-family: 'Roboto';
+  font-size: 88px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 1.91px;
+  color: $color-warning-t-2;
+}
+
+@mixin textindicationXLprimary {
+  font-family: 'Roboto';
+  font-size: 88px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 1.91px;
+  color: $color-primary;
+}
+
+@mixin textindicationXLerror {
+  font-family: 'Roboto';
+  font-size: 88px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 1.91px;
+  color: $color-error;
+}
+
+@mixin textHeading_3 {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0.87px;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textHeading_4 {
+  font-family: 'Roboto';
+  font-size: 32px;
+  color: $color-primary;
+}
+
+@mixin textindicationMprimary {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 3.5;
+  letter-spacing: 0.61px;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textindicationMwarning_T2 {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 3.5;
+  letter-spacing: 0.61px;
+  text-align: center;
+  color: $color-warning-t-2;
+}
+
+@mixin textindicationMerror {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 3.5;
+  letter-spacing: 0.61px;
+  text-align: center;
+  color: $color-error;
+}
+
+@mixin textindicationMdesibale {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 3.5;
+  letter-spacing: 0.61px;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textHeading_2 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.52px;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textheading_5 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-bg-1;
+}
+
+@mixin textindicationserror {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.52px;
+  text-align: center;
+  color: $color-error;
+}
+
+@mixin textindicationswarning_T2 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.52px;
+  text-align: center;
+  color: $color-warning-t-2;
+}
+
+@mixin textSubtitle_3 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  color: $color-primary;
+}
+
+@mixin textindicationsdisable {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.52px;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textindicationsprimary {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.52px;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textlogo {
+  font-family: 'Roboto';
+  font-family: HPSimplifiedME;
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 0.53px;
+  color: $color-primary;
+}
+
+@mixin kedem-headlineheadline-8 {
+  font-family: 'Roboto';
+  font-size: 22px;
+  color: $color-primary-fill;
+}
+
+@mixin H3-on-white {
+  font-family: 'Roboto';
+  font-size: 21px;
+  font-weight: 900;
+  color: #434b52;
+}
+
+@mixin kedem-headlineheadline-1caps {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-primary-fill;
+}
+
+@mixin textheading_1 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textheading_1_error {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-error;
+}
+
+@mixin textheading_1_reg {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-primary;
+}
+
+@mixin textheading_1_succes {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-success;
+}
+
+@mixin textindicationxsdisable {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.39px;
+  text-align: right;
+  color: $color-primary-30;
+}
+
+@mixin textindicationxssuccess {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.39px;
+  color: #10ff00;
+}
+
+@mixin textindicationxswarning_T2 {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.39px;
+  text-align: right;
+  color: $color-warning-t-2;
+}
+
+@mixin textindicationxsprimary {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.39px;
+  text-align: right;
+  color: $color-primary;
+}
+
+@mixin textindicationxserror {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.39px;
+  text-align: right;
+  color: $color-error;
+}
+
+@mixin textSubtitle_4 {
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 0.39px;
+  color: $color-primary;
+}
+
+@mixin textbody_with_shadow {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textSubtitle_2 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textbodydark {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: 0.35px;
+  text-align: center;
+  color: $color-bg-1;
+}
+
+@mixin textbody {
+  font-family: 'Roboto';
+  font-size: 16px;
+  letter-spacing: 0.35px;
+  color: $color-primary;
+}
+
+@mixin textbody_error {
+  font-family: 'Roboto';
+  font-size: 16px;
+  letter-spacing: 0.35px;
+  color: $color-error;
+}
+
+@mixin textbody_success {
+  font-family: 'Roboto';
+  font-size: 16px;
+  letter-spacing: 0.35px;
+  color: #10ff00;
+}
+
+@mixin textbody_warning {
+  font-family: 'Roboto';
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  color: $color-warning-t-2;
+}
+
+@mixin textbody_edit {
+  font-family: 'Roboto';
+  font-size: 16px;
+  letter-spacing: 0.35px;
+  color: $color-bg-1;
+}
+
+@mixin Paragraph-Regular-Dark {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #434b52;
+}
+
+@mixin textbodylink {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.31px;
+  color: $color-icon;
+}
+
+@mixin textbodysuccess {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.31px;
+  color: #10ff00;
+}
+
+@mixin textbodywarning {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.31px;
+  color: $color-warning-t-1;
+}
+
+@mixin textsubtitle_1 {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textsubtitle_1_cap {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  color: $color-primary;
+}
+
+@mixin textsubtitle_tiny_icon {
+  font-family: 'Roboto';
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: $color-icon;
+}
+
+@mixin textsubtitle_tiny {
+  font-family: 'Roboto';
+  font-size: 11px;
+  line-height: 1;
+  color: $color-primary;
+}

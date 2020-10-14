@@ -1,0 +1,98 @@
+.state-menu-wrapper {
+  height: 100%;
+  .state-menu-panel {
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.standby {
+      background-image: url('/assets/controller/state-menu/controller-state-standby-not-selected.svg');
+      &-ready-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-standby-ready-selected.svg');
+      }
+      &-standby-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-standby-standby-selected.svg');
+      }
+      &-off-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-standby-off-selected.svg');
+      }
+    }
+    &.print,
+    &.ready {
+      background-image: url('/assets/controller/state-menu/controller-state-ready-not-selected.svg');
+      &-ready-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-ready-ready-selected.svg');
+      }
+      &-standby-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-ready-standby-selected.svg');
+      }
+      &-off-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-ready-off-selected.svg');
+      }
+    }
+    &.error {
+      background-image: url('/assets/controller/state-menu/controller-state-error-not-selected.svg');
+      &-ready-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-error-ready-selected.svg');
+      }
+      &-standby-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-error-standby-selected.svg');
+      }
+      &-off-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-error-off-selected.svg');
+      }
+    }
+    &.service {
+      background-image: url('/assets/controller/state-menu/controller-state-service-not-selected.svg');
+      &-ready-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-service-ready-selected.svg');
+      }
+      &-standby-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-service-standby-selected.svg');
+      }
+      &-off-pressed {
+        background-image: url('/assets/controller/state-menu/controller-state-service-off-selected.svg');
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: (85%, 100%);
+    background-position: center;
+    width: 22%;
+    height: 30%;
+    &.disabled {
+      pointer-events: none;
+    }
+    &.ready-btn {
+      top: 14%;
+      left: 65.7%;
+      background-image: url('/assets/controller/state-menu/icons/icons-state-ready-act.svg');
+      &.disabled {
+        background-image: url('/assets/controller/state-menu/icons/icons-state-ready-dis.svg');
+      }
+    }
+    &.standby-btn {
+      top: 43%;
+      left: 47.7%;
+      background-image: url('/assets/controller/state-menu/icons/icons-state-standby-act.svg');
+      &.disabled {
+        background-image: url('/assets/controller/state-menu/icons/icons-state-standby-dis.svg');
+      }
+    }
+    &.off-btn {
+      top: 61.5%;
+      left: 20%;
+      background-image: url('/assets/controller/state-menu/icons/icons-state-off-act.svg');
+      &.disabled {
+        background-image: url('/assets/controller/state-menu/icons/icons-state-off-dis.svg');
+      }
+    }
+  }
+}

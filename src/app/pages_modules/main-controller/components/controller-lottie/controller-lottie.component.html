@@ -1,0 +1,120 @@
+<div class="lottie-container" [attr.data-automation-id]='currentLottie'>
+  <ng-container #viewContainerRef></ng-container>
+</div>
+
+<ng-template #tplOff>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="offLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplOffToStandby>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="offToStandbyLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplOffToReady>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="offToReadyLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplOffReadyToStandby>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="offReadyToStandbyLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplOffStandbyToReady>
+  <div @fadeIn>
+    <ng-lottie [options]="offStandbyToReadyLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplPrinting>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="printingLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplPause>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <div class="blink-pause">
+      <ng-lottie [options]="pauseBlinkLottieConfig"></ng-lottie>
+    </div>
+    <ng-lottie [options]="pauseLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplError>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="errorLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplGoToService>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="goToServiceLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplService>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="serviceLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplServiceToStandby>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="serviceToStandbyLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplStandby>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="standbyLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplReady>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="readyLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplStandbyToReady>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="standbyToReadyLottieConfig" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplReadyToOff>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="readyToOffLottieConfig" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplReadyToStandby>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="readyToStandbyLottieConfig" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplPrePostPrint>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="prePostPrintLottieConfig"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplStandbyToOff>
+  <div @fadeIn (@fadeIn.done)="fadeDone($event)">
+    <ng-lottie [options]="standbyToOffLottieConfig" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+</ng-template>
+
+<ng-template #tplPowerDisable>
+  <div>
+    <img id="PowerDisable" src="assets/controller/json_animations/PowerDisable.png" />
+  </div>
+</ng-template>

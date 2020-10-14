@@ -1,0 +1,47 @@
+<div cdkDrag class="wizard-host-container">
+  <header cdkDragHandle>
+    <input class="minimize-svg enabled" [class.hide]="!isWithMinimize" type="button" />
+    <div class="state-indicator" [ngClass]="headerState | lowercase"></div>
+    <h3>{{ title | uppercase }}</h3>
+  </header>
+
+  <main>
+    <ng-content></ng-content>
+  </main>
+
+  <footer>
+    <button [style.visibility]="isBackVisible ? 'visible' : 'hidden'" class="back-btn disabled">BACK</button>
+    <div class="right-btns">
+      <button
+        [disabled]="!isOkAvailable"
+        [ngClass]="{ disabled: !isOkAvailable }"
+        [style.visibility]="isOkVisible ? 'visible' : 'hidden'"
+        class="ok-btn"
+        (click)="onWizardOkClick()"
+      >
+        OK
+      </button>
+      <button
+        [disabled]="!isCancelAvailable"
+        [ngClass]="{ disabled: !isCancelAvailable }"
+        [style.visibility]="isCancelVisible ? 'visible' : 'hidden'"
+        class="cancel-btn"
+        (click)="onWizardCancelClick()"
+      >
+        CANCEL
+      </button>
+    </div>
+  </footer>
+</div>
+
+<hp-modal-host
+  id="cancel-calibration"
+  [modalTitle]="modalTitle"
+  [screenPosition]="screenPosition.Right"
+  [innerContent]="modalInnerText"
+  [leftBtnTxt]="modalLeftBtnTxt"
+  (leftBtnClick)="onModalContinue()"
+  [rightBtnTxt]="modalRightBtnTxt"
+  (rightBtnClick)="onModalCancel()"
+>
+</hp-modal-host>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="0uu5bek02c" x1="50%" x2="50%" y1=".063%" y2="100%">
+            <stop offset=".005%" stop-color="#435E7D"/>
+            <stop offset="100%" stop-color="#001429"/>
+        </linearGradient>
+        <filter id="ld6k9tapha" width="200%" height="200%" x="-43.9%" y="-45.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2" result="shadowSpreadOuter1"/>
+            <feOffset dx="3" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="7"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2" result="shadowSpreadOuter2"/>
+            <feOffset dx="-4" dy="-4" in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
+            <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="2"/>
+            <feComposite in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"/>
+            <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0.298039216 0 0 0 0 0.329411765 0 0 0 0 0.384313725 0 0 0 0.3 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="shadowMatrixOuter2"/>
+            </feMerge>
+        </filter>
+        <circle id="nb0e5rchvb" cx="31.5" cy="31.5" r="24.5"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#000" filter="url(#ld6k9tapha)" xlink:href="#nb0e5rchvb"/>
+        <use fill="url(#0uu5bek02c)" xlink:href="#nb0e5rchvb"/>
+        <circle cx="31.5" cy="31.5" r="25.5" stroke="#001429" stroke-width="2"/>
+        <circle cx="31.5" cy="31.5" r="23.5" stroke="#2C92FF" stroke-linejoin="square" stroke-width="2"/>
+        <g fill="#FFF" fill-rule="nonzero">
+            <g>
+                <g>
+                    <path d="M.563 9c-.144 0-.288-.056-.398-.165-.22-.22-.22-.576 0-.795L8.04.165c.219-.22.576-.22.795 0 .22.219.22.576 0 .795L.96 8.835c-.11.109-.253.164-.397.164z" transform="translate(20 19) translate(1 1) translate(13)"/>
+                    <path d="M.563 9C.253 9 0 8.746 0 8.436v-6.75c0-.31.252-.563.563-.563.31 0 .562.252.562.563v6.75c0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(13)"/>
+                    <path d="M7.313 9H.563C.253 9 0 8.746 0 8.436c0-.31.252-.563.563-.563h6.75c.31 0 .562.252.562.563 0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(13)"/>
+                </g>
+                <g>
+                    <path d="M.563 9c-.144 0-.288-.055-.398-.164-.22-.22-.22-.576 0-.796L8.04.165c.219-.219.576-.219.795 0 .22.22.22.576 0 .796L.96 8.836C.85 8.945.707 9 .563 9z" transform="translate(20 19) translate(1 1) translate(0 13)"/>
+                    <path d="M8.438 7.875c-.31 0-.563-.252-.563-.563V.563c0-.31.252-.562.563-.562.31 0 .562.252.562.563v6.75c0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(0 13)"/>
+                    <path d="M8.438 1.125h-6.75c-.31 0-.563-.252-.563-.563 0-.31.252-.562.563-.562h6.75C8.748 0 9 .252 9 .563c0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(0 13)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

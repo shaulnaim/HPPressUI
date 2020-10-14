@@ -1,0 +1,38 @@
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  background-origin: border-box;
+  user-select: none;
+  color: inherit;
+  border-width: 0;
+  padding: 5rem;
+  cursor: pointer;
+}
+
+input[type='button'] {
+  background-color: transparent;
+  border: none;
+  padding: 0rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

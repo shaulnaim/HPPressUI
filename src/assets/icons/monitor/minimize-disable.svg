@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="rp8m60dj2a" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#1A2B3E"/>
+            <stop offset="100%" stop-color="#001429"/>
+        </linearGradient>
+        <circle id="gmx9e3xd2b" cx="31.5" cy="31.5" r="24.5"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="url(#rp8m60dj2a)" xlink:href="#gmx9e3xd2b"/>
+        <circle cx="31.5" cy="31.5" r="25.5" stroke="#001429" stroke-width="2"/>
+        <circle cx="31.5" cy="31.5" r="23.5" stroke="#2C92FF" stroke-linejoin="square" stroke-opacity=".2" stroke-width="2"/>
+        <g fill="#FFF" fill-rule="nonzero" opacity=".3">
+            <g>
+                <g>
+                    <path d="M.563 9c-.144 0-.288-.056-.398-.165-.22-.22-.22-.576 0-.795L8.04.165c.219-.22.576-.22.795 0 .22.219.22.576 0 .795L.96 8.835c-.11.109-.253.164-.397.164z" transform="translate(20 19) translate(1 1) translate(13)"/>
+                    <path d="M.563 9C.253 9 0 8.746 0 8.436v-6.75c0-.31.252-.563.563-.563.31 0 .562.252.562.563v6.75c0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(13)"/>
+                    <path d="M7.313 9H.563C.253 9 0 8.746 0 8.436c0-.31.252-.563.563-.563h6.75c.31 0 .562.252.562.563 0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(13)"/>
+                </g>
+                <g>
+                    <path d="M.563 9c-.144 0-.288-.055-.398-.164-.22-.22-.22-.576 0-.796L8.04.165c.219-.219.576-.219.795 0 .22.22.22.576 0 .796L.96 8.836C.85 8.945.707 9 .563 9z" transform="translate(20 19) translate(1 1) translate(0 13)"/>
+                    <path d="M8.438 7.875c-.31 0-.563-.252-.563-.563V.563c0-.31.252-.562.563-.562.31 0 .562.252.562.563v6.75c0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(0 13)"/>
+                    <path d="M8.438 1.125h-6.75c-.31 0-.563-.252-.563-.563 0-.31.252-.562.563-.562h6.75C8.748 0 9 .252 9 .563c0 .31-.252.562-.562.562z" transform="translate(20 19) translate(1 1) translate(0 13)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

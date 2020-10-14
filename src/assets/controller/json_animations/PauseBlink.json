@@ -1,0 +1,110 @@
+{
+  "v": "5.6.5",
+  "fr": 30,
+  "ip": 0,
+  "op": 179,
+  "w": 1700,
+  "h": 1200,
+  "nm": "controller-pause2",
+  "ddd": 0,
+  "assets": [
+    {
+      "id": "image_0",
+      "w": 308,
+      "h": 308,
+      "u": "",
+      "p": "data:image/png;base64,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",
+      "e": 1
+    },
+    {
+      "id": "comp_0",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 0,
+          "nm": "controller-pause-active@2x",
+          "refId": "comp_1",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [154, 154, 0], "ix": 2 },
+            "a": { "a": 0, "k": [154, 154, 0], "ix": 1 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+          },
+          "ao": 0,
+          "w": 308,
+          "h": 308,
+          "ip": 0,
+          "op": 2700,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_1",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 2,
+          "nm": "controller-pause-active@2x.png",
+          "cl": "png",
+          "refId": "image_0",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [154, 154, 0], "ix": 2 },
+            "a": { "a": 0, "k": [154, 154, 0], "ix": 1 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+          },
+          "ao": 0,
+          "ip": 0,
+          "op": 2700,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 0,
+      "nm": "controller-pause",
+      "refId": "comp_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            { "i": { "x": [0.667], "y": [1] }, "o": { "x": [0.333], "y": [0] }, "t": 0, "s": [100] },
+            { "i": { "x": [0.667], "y": [1] }, "o": { "x": [0.333], "y": [0] }, "t": 24, "s": [0] },
+            { "t": 30, "s": [100] }
+          ],
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = loopOut('cycle', 0);"
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": { "a": 0, "k": [829.25, 501.5, 0], "ix": 2 },
+        "a": { "a": 0, "k": [154, 154, 0], "ix": 1 },
+        "s": { "a": 0, "k": [50, 50, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "w": 308,
+      "h": 308,
+      "ip": 0,
+      "op": 2700,
+      "st": 0,
+      "bm": 0
+    }
+  ],
+  "markers": [
+    { "tm": 90, "cm": "3", "dr": 0 },
+    { "tm": 105, "cm": "2", "dr": 0 }
+  ]
+}

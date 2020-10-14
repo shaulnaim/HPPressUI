@@ -1,0 +1,16 @@
+@import 'globals/base';
+
+.slot-wrapper {
+  display: grid;
+  grid-template-columns: [first] 85% [line2] 1fr [end];
+  grid-template-rows: auto;
+  grid-gap: 10rem;
+  .job-container {
+    height: 100rem;
+    outline: none;
+    @include frame;
+    &.active {
+      @include focused-frame;
+    }
+  }
+}

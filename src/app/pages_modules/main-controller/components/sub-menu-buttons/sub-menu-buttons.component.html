@@ -1,0 +1,35 @@
+<div *ngIf="isShowSubMenu" @slide (@slide.start)="slideSubMenuStart($event)" (@slide.done)="slideSubMenuDone($event)" class="sub-menu-wrapper">
+  <div class="sub-menu-panel" [ngClass]="(menuPanelState | lowercase) + currentButtonPressed"></div>
+  <div class="sub-menu-buttons">
+    <input
+      data-automation-id="ControllerMenuShutdownButton"
+      type="button"
+      class="btn shutdown-btn"
+      [ngClass]="controllerStateEntity?.IsShutdownAvailable ? '' : 'disabled'"
+      [disabled]="!controllerStateEntity?.IsShutdownAvailable"
+      (pointerdown)="onShutdownBtnPressed()"
+    /><span class="icon"></span>
+    <input
+      data-automation-id="ControllerMenuRestartButton"
+      type="button"
+      class="btn restart-btn"
+      [ngClass]="controllerStateEntity?.IsRestartAvailable ? '' : 'disabled'"
+      [disabled]="!controllerStateEntity?.IsRestartAvailable"
+      (pointerdown)="onRestartBtnPressed()"
+    /><span class="icon"></span>
+    <input
+      data-automation-id="ControllerMenuServiceButton"
+      type="button"
+      class="btn service-btn"
+      [ngClass]="controllerStateEntity?.IsServiceAvailable ? '' : 'disabled'"
+      [disabled]="!controllerStateEntity?.IsServiceAvailable"
+      (pointerdown)="onServiceBtnPressed()"
+    /><span class="icon"></span>
+  </div>
+</div>
+
+<div data-automation-id="ControllerToggleSubmenuBtn" class="dots-button-wrapper" (pointerdown)="showSubmenu()">
+  <div *ngIf="isShowSubMenu" class="dots-container">
+    <div class="dots" [ngClass]="menuPanelState | lowercase"></div>
+  </div>
+</div>

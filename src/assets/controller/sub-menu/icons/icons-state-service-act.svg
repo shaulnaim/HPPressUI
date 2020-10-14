@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+    <defs>
+        <filter id="prefix__a" width="210%" height="198.7%" x="-55%" y="-49.4%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3.5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0"/>
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1.5" result="shadowSpreadOuter2"/>
+            <feOffset in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
+            <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="4"/>
+            <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0.603921569 0 0 0 0 0.694117647 0 0 0 0 1 0 0 0 0.4 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="shadowMatrixOuter2"/>
+            </feMerge>
+        </filter>
+        <path id="prefix__b" d="M31 11.416l.164.07C35.844 13.508 39 18.155 39 23.42c0 4.757-2.575 9.06-6.649 11.346-.412.231-.601.715-.47 1.157l.04.11c.052.12.079.25.079.387v3c0 .553-.448 1-1 1H21c-.552 0-1-.447-1-1v-3c0-.091.012-.18.035-.266l.044-.125c.2-.47.014-1.014-.43-1.263C15.574 32.48 13 28.176 13 23.42l.004-.315c.123-5.134 3.246-9.637 7.833-11.62l.163-.069v10.505c0 .548.225 1.071.62 1.448l.134.115 3.043 2.286c.635.477 1.49.531 2.18.144l.166-.106 3.056-2.287c.44-.33.723-.824.787-1.367l.012-.175L31 11.416zM29 21.92l-3.002 2.25L23 21.92V10c0-.669-.644-1.15-1.285-.958C15.407 10.919 11 16.739 11 23.42l.004.357c.118 4.989 2.69 9.51 6.769 12.188l.243.156-.006.056c-.007.08-.01.162-.01.243v3c0 1.657 1.343 3 3 3h10c1.657 0 3-1.343 3-3v-3l-.01-.244-.007-.056.244-.155C38.403 33.225 41 28.55 41 23.42c0-6.68-4.406-12.5-10.714-14.378-.641-.191-1.285.29-1.285.958L29 21.92z"/>
+    </defs>
+    <g fill="none">
+        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="#FFF" xlink:href="#prefix__b"/>
+    </g>
+</svg>

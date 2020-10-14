@@ -1,0 +1,25 @@
+<ng-container *ngIf="editMode; else showLabel">
+  <img *ngIf="iconSrcPath" class="input-icon" src="{{ iconSrcPath }}" alt="icon" />
+  <input
+    *ngIf="!isFocused"
+    [(ngModel)]="inputModel"
+    (ngModelChange)="inputModelChange.emit($event)"
+    (blur)="onBlur.emit()"
+    (keydown.enter)="EnterClicked.emit(true); onBlur.emit()"
+    [ngClass]="{ 'input-icon': iconSrcPath }"
+  />
+  <input
+    *ngIf="isFocused"
+    [(ngModel)]="inputModel"
+    (keydown.enter)="EnterClicked.emit(true); onBlur.emit()"
+    (ngModelChange)="inputModelChange.emit($event)"
+    (blur)="onBlur.emit()"
+    [ngClass]="{ 'input-icon': iconSrcPath }"
+    focusable
+  />
+</ng-container>
+
+<ng-template #showLabel>
+  <img *ngIf="iconSrcPath" src="{{ iconSrcPath }}" alt="icon" />
+  <span class="label bold">{{ inputModel }}</span>
+</ng-template>

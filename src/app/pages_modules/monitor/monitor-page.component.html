@@ -1,0 +1,12 @@
+<section [class.splitted-screen]="isSplittedScreen" class="monitor-page-wrapper">
+  <button class="temp" type="button" (click)="toggleWizard()">ILS CLIBRATION PROCESS</button>
+  <hp-wizard-host
+    *ngIf="isShowWizard"
+    [(isVisible)]="isShowWizard"
+    [isBackVisible]="false"
+    [isWithMinimize]="true"
+    [title]="'inline scanner calibration'"
+  >
+    <ils-calibration></ils-calibration>
+  </hp-wizard-host>
+</section>

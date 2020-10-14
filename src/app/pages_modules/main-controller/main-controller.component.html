@@ -1,0 +1,12 @@
+<controller-layout-wrapper [isButtonsLayer]="true">
+  <div class="sub-menu-container">
+    <sub-menu-buttons
+      (isToggleSubMenuClicked)="toggleSubmenu()"
+      (isAnimating)="updateIsAnimating($event)"
+      [isShowSubMenu]="isShowSubMenu"
+    ></sub-menu-buttons>
+  </div>
+  <div class="main-buttons-container">
+    <controller-buttons></controller-buttons>
+  </div>
+</controller-layout-wrapper>

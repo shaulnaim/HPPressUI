@@ -1,0 +1,161 @@
+@import 'globals/base';
+
+.sub-menu-wrapper {
+  height: 100%;
+  .sub-menu-panel {
+    position: absolute;
+    height: 260%;
+    width: 270%;
+    top: -232%;
+    left: -85.2%;
+    background-size: 96% 110%;
+    background-repeat: no-repeat;
+    &.print,
+    &.ready {
+      background-image: url('/assets/controller/sub-menu/controller-sub-menu-ready-nothing-selected.svg');
+      &-shutdown-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-ready-shutdown-selected.svg');
+      }
+      &-restart-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-ready-restart-selected.svg');
+      }
+      &-service-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-ready-service-selected.svg');
+      }
+    }
+    &.standby {
+      background-image: url('/assets/controller/sub-menu/controller-sub-menu-standby-nothing-selected.svg');
+      &-shutdown-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-standby-shutdown-selected.svg');
+      }
+      &-restart-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-standby-restart-selected.svg');
+      }
+      &-service-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-standby-service-selected.svg');
+      }
+    }
+    &.service {
+      background-image: url('/assets/controller/sub-menu/controller-sub-menu-service-nothing-selected.svg');
+      &-shutdown-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-service-shutdown-selected.svg');
+      }
+      &-restart-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-service-restart-selected.svg');
+      }
+      &-service-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-service-service-selected.svg');
+      }
+    }
+    &.off {
+      background-image: url('/assets/controller/sub-menu/controller-sub-menu-off-nothing-selected.svg');
+      &-shutdown-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-off-shutdown-selected.svg');
+      }
+      &-restart-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-off-restart-selected.svg');
+      }
+      &-service-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-off-service-selected.svg');
+      }
+    }
+    &.error {
+      background-image: url('/assets/controller/sub-menu/controller-sub-menu-error-nothing-selected.svg');
+      &-shutdown-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-error-shutdown-selected.svg');
+      }
+      &-restart-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-error-restart-selected.svg');
+      }
+      &-service-pressed {
+        background-image: url('/assets/controller/sub-menu/controller-sub-menu-error-service-selected.svg');
+      }
+    }
+  }
+  .sub-menu-buttons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -107%;
+    .btn {
+      position: relative;
+      height: 69%;
+      width: 65%;
+      &.disabled {
+        pointer-events: none;
+      }
+      &.shutdown-btn {
+        top: 10%;
+        left: 81%;
+        transform: rotate(35deg);
+        & + span.icon {
+          @include absolute-button-icon('/assets/controller/sub-menu/icons/icons-state-shutdown-act.svg', -8%, 97%);
+        }
+        &.disabled + span.icon {
+          @include absolute-button-icon('/assets/controller/sub-menu/icons/icons-state-shutdown-dis.svg', -8%, 97%);
+        }
+      }
+      &.restart-btn {
+        top: -131%;
+        left: 17%;
+        & + span.icon {
+          @include absolute-button-icon('/assets/controller/sub-menu/icons/icons-state-restart-act.svg', -66%, 32%);
+        }
+        &.disabled + span.icon {
+          @include absolute-button-icon('/assets/controller/sub-menu/icons/icons-state-restart-dis.svg', -66%, 35%);
+        }
+      }
+      &.service-btn {
+        top: -140%;
+        left: -49%;
+        transform: rotate(-35deg);
+        & + span.icon {
+          @include absolute-button-icon('/assets/controller/sub-menu/icons/icons-state-service-act.svg', -5%, -27%);
+        }
+        &.disabled + span.icon {
+          @include absolute-button-icon('/assets/controller/sub-menu/icons/icons-state-service-dis.svg', -5%, -27%);
+        }
+      }
+    }
+  }
+}
+
+.dots-button-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: -36%;
+  left: 47%;
+  height: 54%;
+  width: 22%;
+  z-index: 1;
+
+  .dots-container {
+    height: 100%;
+    .dots {
+      position: relative;
+      background-size: 115%;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 104rem;
+      height: 32rem;
+      left: -25rem;
+      top: 12%;
+      &.print,
+      &.ready {
+        background-image: url('/assets/controller/sub-menu/icons/controller-3-dots-ready.svg');
+      }
+      &.error {
+        background-image: url('/assets/controller/sub-menu/icons/controller-3-dots-error.svg');
+      }
+      &.service {
+        background-image: url('/assets/controller/sub-menu/icons/controller-3-dots-service.svg');
+      }
+      &.standby {
+        background-image: url('/assets/controller/sub-menu/icons/controller-3-dots-standby.svg');
+      }
+      &.off {
+        background-image: url('/assets/controller/sub-menu/icons/controller-3-dots-off.svg');
+      }
+    }
+  }
+}

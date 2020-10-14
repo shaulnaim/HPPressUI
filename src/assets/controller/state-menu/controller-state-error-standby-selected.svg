@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="327" height="327" viewBox="0 0 327 327">
+    <defs>
+        <filter id="prefix__a" width="137.9%" height="137%" x="-19%" y="-18.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="shadowSpreadOuter1"/>
+            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="14.5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 1 0 0 0 0 0.450980392 0 0 0 0 0.450980392 0 0 0 0.43 0"/>
+        </filter>
+        <filter id="prefix__d" width="138.3%" height="137.4%" x="-19.2%" y="-18.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="15"/>
+            <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.696133379 0 0 0 0 0 0 0 0 0 0 0 0 0 0.597137238 0"/>
+        </filter>
+        <filter id="prefix__e" width="174%" height="172%" x="-37%" y="-36%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="14.5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 1 0 0 0 0 0.751435452 0 0 0 0 0.450980392 0 0 0 0.0658052885 0"/>
+        </filter>
+        <filter id="prefix__h" width="174.9%" height="172.8%" x="-37.4%" y="-36.4%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="15"/>
+            <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" result="shadowMatrixInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner2" stdDeviation="14"/>
+            <feOffset dx="1" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner2"/>
+            <feColorMatrix in="shadowInnerInner2" result="shadowMatrixInner2" values="0 0 0 0 1 0 0 0 0 0.202915396 0 0 0 0 0.202915396 0 0 0 0.8 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"/>
+                <feMergeNode in="shadowMatrixInner2"/>
+            </feMerge>
+        </filter>
+        <radialGradient id="prefix__c" cx="49.658%" cy="100%" r="104.394%" fx="49.658%" fy="100%" gradientTransform="matrix(0 -.97561 .99113 0 -.495 1.484)">
+            <stop offset="0%" stop-opacity="0"/>
+            <stop offset="83.633%" stop-opacity="0"/>
+            <stop offset="100%" stop-opacity=".99"/>
+        </radialGradient>
+        <radialGradient id="prefix__g" cx="49.658%" cy="100%" r="104.721%" fx="49.658%" fy="100%" gradientTransform="matrix(0 -.97257 .99113 0 -.495 1.483)">
+            <stop offset="0%" stop-opacity="0"/>
+            <stop offset="83.633%" stop-opacity="0"/>
+            <stop offset="100%" stop-opacity=".99"/>
+        </radialGradient>
+        <path id="prefix__b" d="M.104.002H64.59c13.339 95.453 87.376 171.46 181.85 187.756v64.738C116.56 235.252 14.209 130.848.105.002z"/>
+        <path id="prefix__f" d="M55.31 0c15.9 26.363 37.135 49.145 62.208 66.853l-34.297 53.98C49.523 97.57 21.07 67.251 0 32.01z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g stroke-linejoin="round" transform="matrix(-1 0 0 1 293 43)">
+            <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+            <use fill="#000" fill-opacity=".1" xlink:href="#prefix__b"/>
+            <use fill="url(#prefix__c)" fill-opacity=".5" xlink:href="#prefix__b"/>
+            <use fill="#000" filter="url(#prefix__d)" xlink:href="#prefix__b"/>
+            <path stroke="red" stroke-opacity=".2" stroke-width="3" d="M65.9-1.499l-67.462.001c6.765 66.36 36.098 126.043 80.203 171.25 44.21 45.315 103.262 76.083 169.3 84.45l-.001-67.711c-47.485-7.91-89.837-30.996-121.902-64.103C94.05 89.36 72.298 46.36 65.9-1.5z"/>
+            <path stroke="#000" stroke-linejoin="square" stroke-opacity=".51" stroke-width="3" d="M63.29 1.501l-61.511.001c7.317 64.343 36.1 122.172 79.009 166.154 42.993 44.068 100.17 74.235 164.153 83.122l-.001-61.76c-47.116-8.403-89.12-31.569-121.057-64.543C92.04 91.597 70.205 48.968 63.29 1.5z"/>
+        </g>
+        <g opacity=".8" transform="matrix(-1 0 0 1 252.518 128.47)">
+            <use fill="#000" filter="url(#prefix__e)" xlink:href="#prefix__f"/>
+            <use fill="#000" fill-opacity=".5" xlink:href="#prefix__f"/>
+            <use fill="url(#prefix__g)" fill-opacity=".5" xlink:href="#prefix__f"/>
+            <use fill="#000" filter="url(#prefix__h)" xlink:href="#prefix__f"/>
+            <path stroke="#000" stroke-linejoin="square" stroke-opacity=".51" stroke-width="3" d="M54.791 2.034L2.071 32.545C22.683 66.6 50.246 95.977 82.794 118.709l32.695-51.458C91.151 49.828 70.462 27.633 54.791 2.034z"/>
+        </g>
+    </g>
+</svg>
